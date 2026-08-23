@@ -1,0 +1,1236 @@
+<!doctype html><html><head><!-- frame-runtime --><base href="/_f/1787505380-2c7e/"><script>window.__FRAME_PREAMBLE={"capabilities":{"artifact":"artifact.oqIe8shs.js","assets":"assets.BkxVItX2.js","comments":"comments.GLuHR3zP.js","db":"db.CRhVHzSt.js","downloads":"downloads.C3GSvEDP.js","embed":"embed.CZsbekoQ.js","mcp":"mcp.D3B2EyQu.js","permissions":"permissions.BNySkLV5.js","room":"room.DE7EMui-.js","sample":"sample.C7z_6W62.js","self":"artifact.oqIe8shs.js","user":"user.BpKav-Rf.js"},"transforms":"_transforms.h3_8GSUa.js","comments":"_comments.BOgkE6qU.js","translate":"_translate.5HCW4BJh.js"}</script><script>(function(){"use strict";var Y=["light","dark","system"],X=/^[A-Za-z0-9_-]{1,64}$/,D=/^[a-zA-Z_:][a-zA-Z0-9_:.-]{0,127}$/,G=new Set(["class","hidden","value","checked"]);function V(e){const t=e.toLowerCase();return t.startsWith("data-")||t.startsWith("aria-")||G.has(t)}var be="http://www.w3.org/1999/xhtml",Z="http://www.w3.org/2000/svg",J=new Set(["script","style","iframe","noscript","noframes","noembed","xmp","plaintext","template","title","textarea","object","embed"]),Q=new Set(["script","style"]);function ee(e){const t=e.localName.toLowerCase();return e.namespaceURI==="http://www.w3.org/1999/xhtml"?!J.has(t):e.namespaceURI===Z?!Q.has(t):!1}var te=new Set(["html","head","body","frameset"]);function re(e){return e.namespaceURI==="http://www.w3.org/1999/xhtml"&&te.has(e.localName)}function ne(e){if(e===null||typeof e!="object")return!1;const t=e;if(typeof t.target!="string"||!X.test(t.target)||t.text!==void 0&&typeof t.text!="string")return!1;if(t.attrsSet!==void 0){if(t.attrsSet===null||typeof t.attrsSet!="object")return!1;for(const[n,s]of Object.entries(t.attrsSet))if(!D.test(n)||typeof s!="string")return!1}if(t.attrsRemoved!==void 0){if(!Array.isArray(t.attrsRemoved))return!1;for(const n of t.attrsRemoved)if(typeof n!="string"||!D.test(n))return!1}return!0}function se(e,t){if(e===null||typeof e!="object")return!1;const{seq:n,elements:s}=e;if(typeof n!="number"||!Number.isSafeInteger(n)||!Array.isArray(s)||s.length===0||s.length>64)return!1;for(let o=0;o<s.length;o++)if(!t(s[o]))return!1;return!0}function ae(e){return e===null||typeof e!="object"?!1:se(e.__frame_patch,ne)}function oe(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_init;return t!==null&&typeof t=="object"}function ie(e){return e!==null&&typeof e=="object"&&e.__frame_size_poke===!0}function le(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_theme;if(t===null||typeof t!="object")return!1;const n=t.theme;return typeof n=="string"&&Y.includes(n)}var O="__frame_scroll",ce=150,ue=310,fe=160,pe=3e4;function de(){let e=0,t=!1,n=!1,s=!1,o=0,l=null;const c=i=>{try{sessionStorage.setItem(O,JSON.stringify({y:i}))}catch{}},f=()=>{if(clearTimeout(e),l===null)return;const i=l;l=null,c(i)},S=()=>{if(t){t=!1;return}n=!0,l=scrollY,clearTimeout(e),e=setTimeout(f,ce)};try{addEventListener("scroll",S,{passive:!0}),addEventListener("pagehide",f)}catch{}const v=()=>{let i;try{i=sessionStorage.getItem(O)}catch{return null}if(i===null)return null;let d;try{d=JSON.parse(i)}catch{d=null}const u=d?.y;if(!(typeof u=="number"&&Number.isFinite(u)&&u>=0)){try{sessionStorage.removeItem(O)}catch{}return null}return u};let b=!1;const m=i=>{try{const d=scrollY;scrollTo({top:i,left:0,behavior:"instant"}),o=i,s=!0,clearTimeout(e),l=null,c(i);const u=scrollY;u!==d&&(t=!0),u!==i&&!b&&(b=!0,addEventListener("load",()=>{try{if(scrollY===u){const h=v();m(h!==null?h:o)}}catch{}},{once:!0}))}catch{}},y=()=>{try{return!!location.hash}catch{return!0}};let g=!1;const E=()=>{try{if(g||innerWidth>ue||innerHeight>fe)return;g=!0;const i=Date.now(),d=()=>{try{removeEventListener("resize",d)}catch{}if(Date.now()-i>pe||n||y())return;const u=v();m(u!==null?u:o)};addEventListener("resize",d)}catch{}};let r=!1,p=!1;return{restore(){if(r||(r=!0,y()))return;const i=v();i!==null&&(m(i),E())},promoted(){if(p||(p=!0,y()))return;const i=v();i!==null?(m(i),E()):s&&m(o)}}}var Ee="modulepreload",Ae=function(e){return"/"+e},Re={},me=function(t,n,s){let o=Promise.resolve();function l(c){const f=new Event("vite:preloadError",{cancelable:!0});if(f.payload=c,window.dispatchEvent(f),!f.defaultPrevented)throw c}return o.then(c=>{for(const f of c||[])f.status==="rejected"&&l(f.reason);return t().catch(l)})};(function(){const e=Object.defineProperty,t=globalThis,n=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let s=0;for(let o=0;o<n.length;o++){const l=n[o];try{e(t,l,{value:void 0,writable:!1,configurable:!1})}catch{try{delete t[l]}catch{}try{e(t,l,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof t[l]=="function"&&s++}if(s&&window!==top)try{parent.postMessage({__frame_rtc_lockdown_failed:s},"*")}catch{}})();var he=1e4,_e=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]);function F(e){for(const t of _e)if(t.endsWith(":*"))try{const n=new URL(e);if(`${n.protocol}//${n.hostname}:*`===t)return!0}catch{}else if(e===t)return!0;return!1}var M=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities}),j=window.__FRAME_PREAMBLE?.transforms,N=window.__FRAME_PREAMBLE?.comments,I=window.__FRAME_PREAMBLE?.translate,L=/^[\w.-]+\.js$/;function T(e){return me(()=>import("/_runtime/"+e),void 0)}function z(e,t){return{contract:e.contract,changes:new Set(e.changes??[]),flags:new Set(e.flags??[]),capabilities:e.capabilities??{},capBudgets:e.capBudgets??{},transforms:new Map,shellOrigin:t,mount:W,pipe:()=>({wrap:(n,s)=>(...o)=>{try{return s(...o)}catch(l){return Promise.reject(l)}}})}}var P=null,w=null;function q(e,t,n){try{Object.defineProperty(e,t,{value:n,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(e,t,{value:n,writable:!1,configurable:!0,enumerable:!0})}catch{}}}var B=!1;function ve(e,t){const n=[];for(const s of e.elements){const o=document.querySelector(`[data-id="${s.target}"]`);if(!o){parent.postMessage({__frame_patch_miss:{seq:e.seq}},t);return}if([...Object.keys(s.attrsSet??{}),...s.attrsRemoved??[]].some(l=>!V(l))){parent.postMessage({__frame_patch_miss:{seq:e.seq}},t);return}if(s.text!==void 0&&(!ee(o)||re(o))){parent.postMessage({__frame_patch_miss:{seq:e.seq}},t);return}for(const[l,c]of Object.entries(s.attrsSet??{}))if(!$(o,l)){try{o.setAttribute(l,c)}catch{}H(o,l,c)}for(const l of s.attrsRemoved??[])$(o,l)||(o.removeAttribute(l),H(o,l,null));typeof s.text=="string"&&(o.textContent=s.text),n.push(s.target)}try{document.dispatchEvent(new CustomEvent("claude:edit",{detail:{seq:e.seq,targets:n}}))}catch{}}function H(e,t,n){if(!(e instanceof HTMLInputElement))return;const s=t.toLowerCase();s==="checked"?e.checked=n!==null:s==="value"&&e.type!=="file"&&(e.value=n??"")}function $(e,t){const n=t.toLowerCase(),s=e;return n==="data-id"||(n==="value"||n==="checked")&&(s.__artifactSecret===!0||/^(password|hidden|file)$/.test(s.type??"")||/(^|\s)(cc-|one-time-code|current-password|new-password)/i.test(`${e.getAttribute("autocomplete")??""} ${s.autocomplete??""}`))}function K(e){const t=document.documentElement;e==="light"||e==="dark"?(t.dataset.theme=e,t.style.colorScheme=e,B=!0):B&&(delete t.dataset.theme,t.style.colorScheme="",B=!1)}var R=new Map;function ye(){let e;const t={u:new Promise(n=>{e=n}),r:n=>{t.done=!0,e(n)},done:!1,nulled:!1};return t}var ge=Object.freeze(Object.assign(Object.create(null),{call:Function.prototype.call,apply:Function.prototype.apply,bind:Function.prototype.bind})),W=(e,t)=>{const n=R.get(e);if(!n||n.done){n?.nulled&&w&&parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:e}},w);return}const s=typeof t=="function"?Object.setPrototypeOf(t,ge):Object.assign(Object.create(null),t);typeof s.then=="function"&&delete s.then,n.r(Object.freeze(s))},U=Object.getOwnPropertyDescriptor(window,"claude");if(window!==top&&!(U&&U.writable===!1)){const e=j&&L.test(j)?T(j).catch(()=>{}):Promise.resolve(void 0),t=r=>{if(r.type==="auxclick"&&r.button!==1)return;const p=r.target,i=p&&p.closest?p.closest("a[href],area[href]"):null;if(!i)return;const d=i.getAttribute("href");if(!d)return;let u,h;try{u=new URL(d,document.baseURI),h=new URL(document.baseURI).origin}catch{return}if((u.protocol==="http:"||u.protocol==="https:")&&u.origin!==h){r.preventDefault();const _=(i.getAttribute("target")??"").toLowerCase(),C=r.type==="auxclick"||r.metaKey||r.ctrlKey||r.shiftKey||r.altKey||!["","_self","_top","_parent"].includes(_);parent.postMessage({__frame_nav:!0,url:u.href,newTab:C},"*")}};addEventListener("click",t,!0),addEventListener("auxclick",t,!0);const n={},s=r=>{r.isTrusted&&(n.pointer=!0)},o=r=>{r.isTrusted&&(n.click=!0)};addEventListener("pointermove",s,{capture:!0,passive:!0}),addEventListener("click",o,{capture:!0,passive:!0}),e.then(r=>{r?.wireNav&&(r.wireNav(),removeEventListener("click",t,!0),removeEventListener("auxclick",t,!0),removeEventListener("pointermove",s,!0),removeEventListener("click",o,!0),r.wireEngagement?.(n))});let l=null;try{l=de()}catch{}const c=U?.value??{};q(window,"claude",c);for(const r of Object.keys(M)){if(c[r]!==void 0){q(c,r,c[r]);continue}R.set(r,ye())}if(c.use===void 0){const r=p=>{if(typeof p!="string"||!Object.hasOwn(M,p))return Promise.resolve(null);const i=R.get(p);return i?i.u:Promise.resolve(c[p]??null)};try{Object.defineProperty(c,"use",{value:r,writable:!0,configurable:!0,enumerable:!1})}catch{}}let f=null,S=null,v=0;const b=r=>{r.source!==parent||!F(r.origin)||oe(r.data)&&(f=r.data.__frame_init,w=r.origin,removeEventListener("message",b),clearTimeout(v),S?.())};addEventListener("message",b),parent.postMessage({__frame_connect:!0},"*");const m=new Promise(r=>{S=r,v=setTimeout(()=>{removeEventListener("message",b),r()},he)}),y=document.readyState==="loading"?new Promise(r=>document.addEventListener("DOMContentLoaded",()=>r(),{once:!0})):Promise.resolve();y.then(()=>{try{l?.restore()}catch{}});const g={cb:null},E=r=>{if(!(r.source!==parent||!F(r.origin))&&ie(r.data)){try{l?.promoted()}catch{}g.cb?.()}};addEventListener("message",E),m.then(async()=>{if(!f||!w){for(const a of R.values())a.nulled=!0,a.r(null);return}K(f.theme);const r=w;let p=!1,i=!1;addEventListener("message",a=>{if(a.source!==parent||a.origin!==r)return;le(a.data)&&K(a.data.__frame_theme.theme),ae(a.data)&&ve(a.data.__frame_patch,r);const k=a.data?.__fc_mode;k&&typeof k=="object"&&!p&&N&&L.test(N)&&(p=!0,T(N).then(x=>x.install?.(r,k.on===!0)).catch(()=>{}));const A=a.data?.__ft_cmd;A&&typeof A=="object"&&!i&&I&&L.test(I)&&(i=!0,T(I).then(x=>x.install?.(r,A)).catch(()=>{}))});const d=Object.keys(f.capabilities??{}).filter(a=>Object.hasOwn(M,a)).map(a=>[a,M[a]]).filter(a=>typeof a[1]=="string"&&L.test(a[1])),u=await Promise.allSettled(d.map(([,a])=>T(a))),h=await e,_=w;if(h?.buildBoot||parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms"}},_),h?.buildBoot)try{P=h.buildBoot(f,h.TRANSFORMS??{},{shellOrigin:_,mount:W},a=>parent.postMessage({__frame_cap_telemetry:a},_))}catch{parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms"}},_),P=z(f,_)}else P=z(f,_);const C=a=>parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:a}},_),we=P;u.forEach((a,k)=>{const A=d[k][0];if(a.status!=="fulfilled"){C(A);return}try{a.value?.install?.(we)}catch{C(A)}});for(const a of R.values())a.done||(a.nulled=!0,a.r(null));await y,parent.postMessage({__frame_ready:!0},w),e.then(a=>a?.installSizeReporter?.(_,g))})}})();</script><!-- /frame-runtime --><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style></head><body>
+<title>Roadmap Cartola Insights</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Karla:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --accent-home: #1f6f4a;
+    --accent-home-soft: #e4efe8;
+    --accent-away: #b5761e;
+    --accent-away-soft: #f4ead9;
+    --bg: #f7f7f4;
+    --bg-elevated: #ffffff;
+    --bg-sunken: #eeeee9;
+    --text: #23241f;
+    --text-muted: #5c5d56;
+    --text-faint: #8b8c84;
+    --border: #dcdcd4;
+    --border-strong: #c3c4ba;
+
+    --font-heading: 'Barlow Condensed', system-ui, sans-serif;
+    --font-body: 'Karla', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+
+    color-scheme: light dark;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --accent-home: #3bb27c;
+      --accent-home-soft: #163326;
+      --accent-away: #e2a23e;
+      --accent-away-soft: #362a12;
+      --bg: #14150f;
+      --bg-elevated: #1b1c15;
+      --bg-sunken: #202117;
+      --text: #eceee6;
+      --text-muted: #a7a89c;
+      --text-faint: #74756a;
+      --border: #34362a;
+      --border-strong: #454736;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --accent-home: #3bb27c;
+    --accent-home-soft: #163326;
+    --accent-away: #e2a23e;
+    --accent-away-soft: #362a12;
+    --bg: #14150f;
+    --bg-elevated: #1b1c15;
+    --bg-sunken: #202117;
+    --text: #eceee6;
+    --text-muted: #a7a89c;
+    --text-faint: #74756a;
+    --border: #34362a;
+    --border-strong: #454736;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+
+  a { color: var(--accent-home); }
+  a:focus-visible, button:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--accent-home);
+    outline-offset: 2px;
+  }
+
+  .page {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 5rem;
+  }
+
+  /* ---------- Header ---------- */
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+
+  h1 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    margin: 0.3rem 0 0.6rem;
+    text-wrap: balance;
+  }
+
+  .subtitle {
+    max-width: 62ch;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+  }
+
+  .status-rail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.75rem;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    padding: 0.35em 0.75em;
+    border-radius: 999px;
+    border: 1px solid var(--border-strong);
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+  .pill.done {
+    color: var(--accent-home);
+    border-color: color-mix(in srgb, var(--accent-home) 45%, var(--border-strong));
+    background: var(--accent-home-soft);
+  }
+  .pill.next {
+    color: var(--accent-away);
+    border-color: color-mix(in srgb, var(--accent-away) 45%, var(--border-strong));
+    background: var(--accent-away-soft);
+  }
+  .pill .dot { width: 0.5em; height: 0.5em; border-radius: 50%; background: currentColor; }
+
+  .progress-panel {
+    margin-top: 1.25rem;
+    padding: 1rem 1.1rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  .progress-copy {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.55rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+  .progress-track {
+    height: 12px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--bg-sunken);
+    border: 1px solid var(--border);
+  }
+  .progress-fill {
+    width: 45.45%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-home), color-mix(in srgb, var(--accent-home) 72%, var(--accent-away)));
+  }
+  .delivery-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 0.65rem;
+    margin-top: 0.85rem;
+  }
+  .delivery-state {
+    padding: 0.7rem 0.8rem;
+    border-radius: 7px;
+    border: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+  }
+  .delivery-state strong { display: block; color: var(--text); font-family: var(--font-mono); }
+  .delivery-state.main { border-left: 3px solid var(--accent-home); }
+  .delivery-state.merge { border-left: 3px solid var(--accent-away); }
+  .delivery-state.pending { border-left: 3px solid var(--text-faint); }
+  .delivery-badge {
+    display: inline-flex;
+    margin-top: 0.5rem;
+    padding: 0.18em 0.55em;
+    border-radius: 4px;
+    font: 0.68rem var(--font-mono);
+    letter-spacing: 0.03em;
+  }
+  .delivery-badge.main { color: var(--accent-home); background: var(--accent-home-soft); }
+  .delivery-badge.merge { color: var(--accent-away); background: var(--accent-away-soft); }
+  .delivery-badge.pending { color: var(--text-faint); background: var(--bg-sunken); }
+
+  /* ---------- Sections ---------- */
+
+  section { margin-top: 4rem; }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  h2 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.9rem;
+    margin: 0;
+    letter-spacing: -0.005em;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0 0 0.4rem;
+  }
+
+  .section-status {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.3em 0.7em;
+    border-radius: 4px;
+  }
+  .section-status.done { color: var(--accent-home); background: var(--accent-home-soft); }
+  .section-status.next { color: var(--accent-away); background: var(--accent-away-soft); }
+  .section-status.future { color: var(--text-faint); background: var(--bg-sunken); }
+
+  .lede { max-width: 68ch; color: var(--text-muted); margin-bottom: 2rem; }
+
+  /* ---------- Stat row ---------- */
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2.25rem;
+  }
+  .stat {
+    background: var(--bg-elevated);
+    padding: 1rem 1.1rem;
+  }
+  .stat .n {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--accent-home);
+    display: block;
+  }
+  .stat .l {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+
+  /* ---------- Diagrams ---------- */
+
+  figure { margin: 0 0 2.25rem; }
+  .diagram-wrap {
+    overflow-x: auto;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1rem;
+  }
+  .diagram-wrap svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .diagram-wrap svg text { font-family: var(--font-body); fill: currentColor; }
+  .diagram-wrap svg .mono { font-family: var(--font-mono); }
+  figcaption {
+    margin-top: 0.65rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    max-width: 68ch;
+  }
+
+  .node-box { fill: var(--bg-sunken); stroke: var(--border-strong); stroke-width: 1.25; }
+  .node-box.done { fill: var(--accent-home-soft); stroke: var(--accent-home); }
+  .node-box.next { fill: var(--accent-away-soft); stroke: var(--accent-away); }
+  .node-box.muted { fill: var(--bg-sunken); stroke: var(--border); stroke-dasharray: 3 3; }
+  .edge { stroke: var(--text-faint); stroke-width: 1.25; fill: none; }
+  .edge.warn { stroke: var(--accent-away); }
+  .edge-label { font-size: 10.5px; fill: var(--text-muted); }
+  .node-label { font-size: 12px; }
+  .node-sub { font-size: 10px; fill: var(--text-muted); }
+
+  /* Radar chart */
+  .radar-ring { fill: none; stroke: var(--border); stroke-width: 1; }
+  .radar-axis { stroke: var(--border-strong); stroke-width: 1; }
+  .radar-fill { fill: var(--accent-home); fill-opacity: 0.16; stroke: var(--accent-home); stroke-width: 1.75; stroke-linejoin: round; }
+  .radar-vertex { fill: var(--accent-home); }
+  .radar-label { font-size: 11px; fill: var(--text-muted); }
+  .radar-label.hi { fill: var(--text); font-weight: 700; }
+
+  /* Fase 3 cards */
+  .scope-row { display: flex; gap: 0.35rem; margin-bottom: 0.5rem; }
+  .scope-chip {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.12em 0.5em;
+    border-radius: 4px;
+    border: 1px solid var(--border-strong);
+    color: var(--text-muted);
+  }
+  .scope-chip.backend { color: var(--accent-home); border-color: color-mix(in srgb, var(--accent-home) 45%, var(--border-strong)); background: var(--accent-home-soft); }
+  .scope-chip.web { color: var(--accent-away); border-color: color-mix(in srgb, var(--accent-away) 45%, var(--border-strong)); background: var(--accent-away-soft); }
+
+  /* ---------- Decisions list ---------- */
+
+  .decisions { list-style: none; margin: 0 0 2.25rem; padding: 0; display: grid; gap: 0.9rem; }
+  .decisions li {
+    padding-left: 1.1rem;
+    border-left: 2px solid var(--accent-home);
+    color: var(--text-muted);
+    font-size: 0.94rem;
+  }
+  .decisions li strong { color: var(--text); font-weight: 700; }
+  .decisions.next-list li { border-left-color: var(--accent-away); }
+
+  /* ---------- Task pipeline list ---------- */
+
+  .tasks { display: grid; gap: 0.9rem; margin-bottom: 1rem; }
+  .task {
+    display: grid;
+    grid-template-columns: 2.75rem 1fr;
+    gap: 0 1rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+  }
+  .task .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 1.3rem;
+    color: var(--accent-away);
+    line-height: 1.4;
+  }
+  .task h3 { font-size: 1.05rem; margin-bottom: 0.15rem; }
+  .task p { margin: 0.15rem 0 0; color: var(--text-muted); font-size: 0.92rem; }
+  .task .files {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .file-chip {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    background: var(--bg-sunken);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.15em 0.5em;
+    white-space: nowrap;
+  }
+  .file-chip.new { color: var(--accent-home); border-color: color-mix(in srgb, var(--accent-home) 40%, var(--border)); }
+
+  /* ---------- Future cards ---------- */
+
+  .future-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .future-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.2rem;
+  }
+  .future-card .tag {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-faint);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .future-card p { color: var(--text-muted); font-size: 0.92rem; margin: 0.4rem 0 0; }
+
+  footer {
+    margin-top: 4.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-faint);
+    font-size: 0.82rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  footer .mono { font-family: var(--font-mono); }
+</style>
+
+<div class="page">
+
+  <header>
+    <p class="eyebrow">Cartola Insights · Backend + Web</p>
+    <h1>Roadmap Cartola Insights</h1>
+    <p class="subtitle">
+      Duas frentes independentes a partir da fundação já construída (Fases 1–2):
+      contas e autenticação (backend e telas web prontos, API pública e MCP
+      pela frente) — e visualização avançada, o caminho de volta até o visual validado
+      na POC original: radar de atributos, raio-X de confronto e perfil de risco.
+    </p>
+    <div class="status-rail">
+      <span class="pill done"><span class="dot"></span>Fases 1–2 — Fundação + MVP</span>
+      <span class="pill done"><span class="dot"></span>Fase 4a — Auth backend</span>
+      <span class="pill done"><span class="dot"></span>Telas de conta (web)</span>
+      <span class="pill done"><span class="dot"></span>Fase 3a — Percentis</span>
+      <span class="pill next"><span class="dot"></span>Fase 4b — API pública</span>
+      <span class="pill">Fase 5 — MCP autenticado</span>
+      <span class="pill">Fase 3b–3e — Visualização avançada</span>
+    </div>
+    <div class="progress-panel" aria-label="Progresso global do roadmap: 5 de 11 marcos entregues na main">
+      <div class="progress-copy"><strong>Progresso global</strong><span>5 / 11 marcos · 45%</span></div>
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="11" aria-valuenow="5" aria-label="5 de 11 marcos concluídos">
+        <div class="progress-fill"></div>
+      </div>
+      <div class="delivery-summary">
+        <div class="delivery-state main"><strong>5 entregues na main</strong>Fundação, MVP web, Auth, telas de conta e Fase 3a.</div>
+        <div class="delivery-state merge"><strong>0 aguardando merge</strong>Nenhuma entrega pronta está fora da main.</div>
+        <div class="delivery-state pending"><strong>6 ainda pendentes</strong>3b, 3c, 3d, 3e, 4b e 5.</div>
+      </div>
+    </div>
+  </header>
+
+  <figure>
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 880 250" role="img" aria-label="Quatro etapas do roadmap: Fase 4a habilita tanto as telas de conta no web quanto a Fase 4b de API pública; a Fase 4b por sua vez habilita a Fase 5 de MCP autenticado.">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--text-faint)"></path>
+          </marker>
+        </defs>
+
+        <!-- Fase 4a -->
+        <rect class="node-box done" x="30" y="30" width="190" height="66" rx="6"></rect>
+        <text class="node-label" x="125" y="58" text-anchor="middle">Fase 4a</text>
+        <text class="node-sub" x="125" y="76" text-anchor="middle">Contas e autenticação (backend)</text>
+
+        <!-- Fase 4b -->
+        <rect class="node-box next" x="345" y="30" width="190" height="66" rx="6"></rect>
+        <text class="node-label" x="440" y="58" text-anchor="middle">Fase 4b</text>
+        <text class="node-sub" x="440" y="76" text-anchor="middle">Exposição pública da API</text>
+
+        <!-- Fase 5 -->
+        <rect class="node-box muted" x="660" y="30" width="190" height="66" rx="6"></rect>
+        <text class="node-label" x="755" y="58" text-anchor="middle">Fase 5</text>
+        <text class="node-sub" x="755" y="76" text-anchor="middle">MCP autenticado</text>
+
+        <!-- Telas de conta -->
+        <rect class="node-box done" x="30" y="160" width="220" height="66" rx="6"></rect>
+        <text class="node-label" x="140" y="188" text-anchor="middle">Telas de conta (web)</text>
+        <text class="node-sub" x="140" y="206" text-anchor="middle">Concluída · mergeada em main</text>
+
+        <!-- Arrows -->
+        <line class="edge" x1="220" y1="63" x2="345" y2="63" marker-end="url(#arrow)"></line>
+        <text class="edge-label mono" x="282" y="53" text-anchor="middle">sem mudar auth</text>
+
+        <line class="edge" x1="535" y1="63" x2="660" y2="63" marker-end="url(#arrow)"></line>
+        <text class="edge-label mono" x="597" y="53" text-anchor="middle">token pessoal</text>
+
+        <line class="edge warn" x1="125" y1="96" x2="130" y2="160" marker-end="url(#arrow)"></line>
+        <text class="edge-label mono" x="140" y="130" text-anchor="middle">consome /contas</text>
+      </svg>
+    </div>
+    <figcaption>
+      A Fase 4a criou a base de contas no backend. Dela partem dois caminhos independentes:
+      as telas de conta no web (consomem a API de contas, não bloqueiam o resto) e a Fase 4b
+      (expõe os dados de leitura publicamente, sem exigir nova autenticação). A Fase 5 (MCP)
+      só entra depois da 4b, usando o token pessoal já emitido pela 4a. A frente de
+      <strong>visualização avançada</strong> (mais abaixo nesta página) é uma trilha separada —
+      não depende de nenhuma dessas quatro fases, só da fundação de dados já pronta desde a Fase 2.
+    </figcaption>
+  </figure>
+
+  <!-- ================= FASE 4A ================= -->
+
+  <section>
+    <div class="section-head">
+      <h2>Fase 4a — Contas e Autenticação</h2>
+      <span class="section-status done">concluída · mergeada em main</span>
+    </div>
+    <p class="lede">
+      Novo contexto <code class="mono">app/contexts/contas/</code> no backend: registro,
+      login com sessão via cookie <code class="mono">httpOnly</code>, API tokens pessoais
+      (bearer, revogáveis) e proteção por papel <code class="mono">admin</code> nas rotas
+      que antes estavam completamente abertas.
+    </p>
+
+    <div class="stats">
+      <div class="stat"><span class="n">11</span><span class="l">tasks TDD</span></div>
+      <div class="stat"><span class="n">259</span><span class="l">testes passando</span></div>
+      <div class="stat"><span class="n">99%</span><span class="l">cobertura</span></div>
+      <div class="stat"><span class="n">3</span><span class="l">rodadas de correção</span></div>
+      <div class="stat"><span class="n">7</span><span class="l">achados corrigidos na revisão final</span></div>
+    </div>
+
+    <figure>
+      <div class="diagram-wrap">
+        <svg viewBox="0 0 760 340" role="img" aria-label="Cookie de sessão e header Bearer convergem para a mesma dependência de identidade, que resolve o usuário ou retorna 401; rotas administrativas somam um segundo filtro de papel que retorna 403 ou libera o acesso.">
+          <defs>
+            <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="var(--text-faint)"></path>
+            </marker>
+          </defs>
+
+          <rect class="node-box" x="20" y="20" width="220" height="56" rx="6"></rect>
+          <text class="node-label mono" x="130" y="53" text-anchor="middle">cookie sessao_token</text>
+
+          <rect class="node-box" x="520" y="20" width="220" height="56" rx="6"></rect>
+          <text class="node-label mono" x="630" y="53" text-anchor="middle">header Authorization: Bearer</text>
+
+          <rect class="node-box" x="205" y="120" width="350" height="56" rx="6"></rect>
+          <text class="node-label" x="380" y="153" text-anchor="middle">obter_usuario_autenticado</text>
+
+          <rect class="node-box muted" x="30" y="220" width="160" height="50" rx="6"></rect>
+          <text class="node-label" x="110" y="250" text-anchor="middle">401 sem credencial</text>
+
+          <rect class="node-box done" x="260" y="220" width="240" height="50" rx="6"></rect>
+          <text class="node-label" x="380" y="250" text-anchor="middle">Usuario identificado</text>
+
+          <rect class="node-box next" x="260" y="290" width="240" height="42" rx="6"></rect>
+          <text class="node-label" x="380" y="316" text-anchor="middle">exigir_admin (rotas /admin/*)</text>
+
+          <!-- convergência -->
+          <line class="edge" x1="130" y1="76" x2="330" y2="120" marker-end="url(#arrow2)"></line>
+          <line class="edge" x1="630" y1="76" x2="430" y2="120" marker-end="url(#arrow2)"></line>
+
+          <line class="edge" x1="300" y1="176" x2="150" y2="220" marker-end="url(#arrow2)"></line>
+          <line class="edge" x1="380" y1="176" x2="380" y2="220" marker-end="url(#arrow2)"></line>
+
+          <line class="edge" x1="380" y1="270" x2="380" y2="290" marker-end="url(#arrow2)"></line>
+        </svg>
+      </div>
+      <figcaption>
+        As duas origens de credencial resolvem para a mesma função — não são dois mecanismos,
+        é uma verificação que aceita ambas (RF09). O papel <code class="mono">admin</code> é um
+        segundo filtro, empilhado só nas rotas administrativas; os endpoints públicos de
+        leitura nunca passam por nenhum dos dois.
+      </figcaption>
+    </figure>
+
+    <ul class="decisions">
+      <li><strong>Tokens opacos, não JWT.</strong> Sessão e API token são strings aleatórias
+        com hash SHA-256 no banco — evita gerenciar chave de assinatura e o problema de
+        revogação de JWT.</li>
+      <li><strong>Sessão e API token são credenciais independentes.</strong> Revogar o token
+        de API não derruba a sessão web; fazer logout não invalida os tokens usados pelo MCP.</li>
+      <li><strong>Emissão/revogação de token exige cookie de sessão, não bearer.</strong>
+        Achado na revisão final: um bearer vazado não pode se auto-renovar nem impedir a
+        própria revogação.</li>
+    </ul>
+  </section>
+
+  <!-- ================= TELAS DE CONTA ================= -->
+
+  <section>
+    <div class="section-head">
+      <h2>Telas de Conta (web)</h2>
+      <span class="section-status done">concluída · mergeada em main</span>
+    </div>
+    <p class="lede">
+      Cadastro, login e uma área "Minha conta" no web app, consumindo o backend de contas.
+      As telas públicas (Tabela, Jogadores, Detalhe) continuam exatamente como estão — sem
+      gate de login.
+    </p>
+
+    <div class="stats">
+      <div class="stat"><span class="n">10</span><span class="l">tasks TDD</span></div>
+      <div class="stat"><span class="n">75</span><span class="l">testes passando</span></div>
+      <div class="stat"><span class="n">96%</span><span class="l">cobertura</span></div>
+      <div class="stat"><span class="n">20</span><span class="l">arquivos no diff</span></div>
+      <div class="stat"><span class="n">1</span><span class="l">achado corrigido na revisão final</span></div>
+    </div>
+
+    <figure>
+      <div class="diagram-wrap">
+        <svg viewBox="0 0 760 400" role="img" aria-label="O app monta, pergunta ao backend quem está logado via GET contas me porque o cookie é invisível ao JavaScript, e o resultado alimenta o estado do AuthContext consumido pela navegação e pela rota protegida.">
+          <defs>
+            <marker id="arrow3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="var(--text-faint)"></path>
+            </marker>
+          </defs>
+
+          <rect class="node-box" x="280" y="16" width="200" height="48" rx="6"></rect>
+          <text class="node-label" x="380" y="45" text-anchor="middle">App monta</text>
+
+          <rect class="node-box" x="200" y="100" width="360" height="52" rx="6"></rect>
+          <text class="node-label mono" x="380" y="131" text-anchor="middle">AuthProvider → GET /contas/me</text>
+
+          <rect class="node-box done" x="60" y="190" width="180" height="48" rx="6"></rect>
+          <text class="node-label" x="150" y="219" text-anchor="middle">200 → usuário</text>
+
+          <rect class="node-box muted" x="520" y="190" width="180" height="48" rx="6"></rect>
+          <text class="node-label" x="610" y="219" text-anchor="middle">401 → deslogado</text>
+
+          <rect class="node-box next" x="230" y="270" width="300" height="52" rx="6"></rect>
+          <text class="node-label" x="380" y="301" text-anchor="middle">AuthContext.usuario</text>
+
+          <rect class="node-box" x="80" y="356" width="220" height="40" rx="6"></rect>
+          <text class="node-label" x="190" y="381" text-anchor="middle">Nav — email/Sair ou Entrar</text>
+
+          <rect class="node-box" x="460" y="356" width="220" height="40" rx="6"></rect>
+          <text class="node-label" x="570" y="381" text-anchor="middle">RotaProtegida — /conta</text>
+
+          <line class="edge" x1="380" y1="64" x2="380" y2="100" marker-end="url(#arrow3)"></line>
+          <line class="edge" x1="300" y1="152" x2="180" y2="190" marker-end="url(#arrow3)"></line>
+          <line class="edge" x1="460" y1="152" x2="580" y2="190" marker-end="url(#arrow3)"></line>
+          <line class="edge" x1="180" y1="238" x2="330" y2="270" marker-end="url(#arrow3)"></line>
+          <line class="edge" x1="580" y1="238" x2="430" y2="270" marker-end="url(#arrow3)"></line>
+          <line class="edge" x1="330" y1="322" x2="200" y2="356" marker-end="url(#arrow3)"></line>
+          <line class="edge" x1="430" y1="322" x2="560" y2="356" marker-end="url(#arrow3)"></line>
+        </svg>
+      </div>
+      <figcaption>
+        O cookie de sessão é <code class="mono">httpOnly</code> — o JavaScript não consegue lê-lo
+        diretamente. Por isso o app pergunta ao backend uma vez ao carregar; o resultado vira o
+        único estado de sessão consumido por toda a árvore (RF05).
+      </figcaption>
+    </figure>
+
+    <figure>
+      <div class="diagram-wrap">
+        <svg viewBox="0 0 900 470" role="img" aria-label="Pipeline de dez tasks: o cliente HTTP alimenta o modulo de contas, que alimenta o AuthContext; a partir dali cinco tasks de paginas e componentes dependem de combinacoes diferentes de contas e AuthContext, convergindo na integracao final e no fechamento de documentacao.">
+          <defs>
+            <marker id="arrow4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="var(--text-faint)"></path>
+            </marker>
+          </defs>
+
+          <!-- L0 -->
+          <rect class="node-box" x="360" y="10" width="180" height="48" rx="6"></rect>
+          <text class="node-label" x="450" y="39" text-anchor="middle">1 · Cliente HTTP</text>
+
+          <!-- L1 -->
+          <rect class="node-box" x="360" y="94" width="180" height="48" rx="6"></rect>
+          <text class="node-label" x="450" y="123" text-anchor="middle">2 · api/contas.ts</text>
+
+          <!-- L2 -->
+          <rect class="node-box" x="360" y="178" width="180" height="48" rx="6"></rect>
+          <text class="node-label" x="450" y="207" text-anchor="middle">3 · AuthContext</text>
+
+          <!-- L3: 5 boxes -->
+          <rect class="node-box" x="10" y="280" width="150" height="56" rx="6"></rect>
+          <text class="node-label" x="85" y="304" text-anchor="middle">4 · RotaProtegida</text>
+          <text class="node-sub" x="85" y="320" text-anchor="middle">usa Task 3</text>
+
+          <rect class="node-box" x="185" y="280" width="150" height="56" rx="6"></rect>
+          <text class="node-label" x="260" y="304" text-anchor="middle">5 · Login</text>
+          <text class="node-sub" x="260" y="320" text-anchor="middle">usa Tasks 2+3</text>
+
+          <rect class="node-box" x="360" y="280" width="180" height="56" rx="6"></rect>
+          <text class="node-label" x="450" y="304" text-anchor="middle">6 · Registro</text>
+          <text class="node-sub" x="450" y="320" text-anchor="middle">usa Task 2</text>
+
+          <rect class="node-box" x="565" y="280" width="150" height="56" rx="6"></rect>
+          <text class="node-label" x="640" y="304" text-anchor="middle">7 · Minha conta</text>
+          <text class="node-sub" x="640" y="320" text-anchor="middle">usa Tasks 2+3</text>
+
+          <rect class="node-box" x="740" y="280" width="150" height="56" rx="6"></rect>
+          <text class="node-label" x="815" y="304" text-anchor="middle">8 · Nav</text>
+          <text class="node-sub" x="815" y="320" text-anchor="middle">usa Task 3</text>
+
+          <!-- L4 -->
+          <rect class="node-box done" x="330" y="382" width="240" height="48" rx="6"></rect>
+          <text class="node-label" x="450" y="411" text-anchor="middle">9 · Integração App.tsx</text>
+
+          <!-- L5 -->
+          <rect class="node-box muted" x="330" y="450" width="240" height="16" rx="6" opacity="0"></rect>
+
+          <!-- edges L0-L1-L2 -->
+          <line class="edge" x1="450" y1="58" x2="450" y2="94" marker-end="url(#arrow4)"></line>
+          <line class="edge" x1="450" y1="142" x2="450" y2="178" marker-end="url(#arrow4)"></line>
+
+          <!-- Task2 fan-out: 5,6,7 -->
+          <line class="edge" x1="400" y1="142" x2="270" y2="280" marker-end="url(#arrow4)"></line>
+          <line class="edge" x1="440" y1="142" x2="448" y2="280" marker-end="url(#arrow4)"></line>
+          <line class="edge" x1="500" y1="142" x2="630" y2="280" marker-end="url(#arrow4)"></line>
+
+          <!-- Task3 fan-out: 4,5,7,8 -->
+          <line class="edge" x1="400" y1="226" x2="95" y2="280" marker-end="url(#arrow4)"></line>
+          <line class="edge" x1="420" y1="226" x2="280" y2="280" marker-end="url(#arrow4)"></line>
+          <line class="edge" x1="480" y1="226" x2="650" y2="280" marker-end="url(#arrow4)"></line>
+          <line class="edge" x1="510" y1="226" x2="800" y2="280" marker-end="url(#arrow4)"></line>
+
+          <!-- converge to Task9 -->
+          <line class="edge" x1="85" y1="336" x2="370" y2="382" marker-end="url(#arrow4)"></line>
+          <line class="edge" x1="260" y1="336" x2="400" y2="382" marker-end="url(#arrow4)"></line>
+          <line class="edge" x1="450" y1="336" x2="450" y2="382" marker-end="url(#arrow4)"></line>
+          <line class="edge" x1="640" y1="336" x2="500" y2="382" marker-end="url(#arrow4)"></line>
+          <line class="edge" x1="815" y1="336" x2="530" y2="382" marker-end="url(#arrow4)"></line>
+        </svg>
+      </div>
+      <figcaption>
+        Cada seta é "depende de". Task 6 (Registro) só precisa do cliente de API — não lê
+        sessão. Task 4 e Task 8 só precisam do <code class="mono">AuthContext</code> — não
+        chamam a API diretamente. Task 5 e Task 7 precisam dos dois. As cinco convergem na
+        integração final (Task 9); Task 10 (evidências/DOD) fecha a fase.
+      </figcaption>
+    </figure>
+
+    <h3 style="margin-top:2.5rem;">As 10 tasks</h3>
+    <div class="tasks">
+
+      <div class="task">
+        <span class="num">01</span>
+        <div>
+          <h3>Cliente HTTP — apiPost/apiDelete</h3>
+          <p>Estende o cliente com <code class="mono">apiPost</code>/<code class="mono">apiDelete</code>, envia <code class="mono">credentials: 'include'</code> em toda chamada e passa a repassar a mensagem de erro (<code class="mono">detail</code>) que o backend devolve.</p>
+          <div class="files">
+            <span class="file-chip">src/api/client.ts</span>
+            <span class="file-chip">src/api/client.test.ts</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">02</span>
+        <div>
+          <h3>Módulo api/contas.ts</h3>
+          <p>Cliente tipado: <code class="mono">registrar</code>, <code class="mono">login</code>, <code class="mono">logout</code>, <code class="mono">obterUsuarioAtual</code>, <code class="mono">gerarToken</code>, <code class="mono">listarTokens</code>, <code class="mono">revogarToken</code> — mesmo padrão de <code class="mono">api/atletas.ts</code>.</p>
+          <div class="files">
+            <span class="file-chip new">src/api/contas.ts</span>
+            <span class="file-chip new">src/api/contas.test.ts</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">03</span>
+        <div>
+          <h3>AuthContext</h3>
+          <p>Contexto React que chama <code class="mono">GET /contas/me</code> ao montar e expõe <code class="mono">{ usuario, carregando, refetch, logout }</code> pra toda a árvore.</p>
+          <div class="files">
+            <span class="file-chip new">src/contexts/AuthContext.tsx</span>
+            <span class="file-chip new">src/contexts/AuthContext.test.tsx</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">04</span>
+        <div>
+          <h3>RotaProtegida</h3>
+          <p>Redireciona para <code class="mono">/entrar</code> quando não há usuário logado; usada só na rota <code class="mono">/conta</code> (CA04).</p>
+          <div class="files">
+            <span class="file-chip new">src/components/RotaProtegida.tsx</span>
+            <span class="file-chip new">src/components/RotaProtegida.test.tsx</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">05</span>
+        <div>
+          <h3>Página Login</h3>
+          <p>Formulário email/senha em <code class="mono">/entrar</code>; sucesso atualiza a sessão e redireciona pra <code class="mono">/</code>; erro mostra mensagem clara sem navegar (CA01, CA02).</p>
+          <div class="files">
+            <span class="file-chip new">src/pages/Login.tsx</span>
+            <span class="file-chip new">src/pages/Login.test.tsx</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">06</span>
+        <div>
+          <h3>Página Registro</h3>
+          <p>Formulário email/senha em <code class="mono">/registrar</code>; sucesso redireciona pra <code class="mono">/entrar</code> com mensagem de confirmação — o backend não loga automaticamente (CA03).</p>
+          <div class="files">
+            <span class="file-chip new">src/pages/Registro.tsx</span>
+            <span class="file-chip new">src/pages/Registro.test.tsx</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">07</span>
+        <div>
+          <h3>Página Minha Conta</h3>
+          <p>Rota protegida: mostra email/papel, gera token (valor cru exibido <strong>uma única vez</strong>, com botão copiar), lista e revoga tokens existentes (CA05, CA06).</p>
+          <div class="files">
+            <span class="file-chip new">src/pages/MinhaConta.tsx</span>
+            <span class="file-chip new">src/pages/MinhaConta.test.tsx</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">08</span>
+        <div>
+          <h3>Navegação dinâmica</h3>
+          <p>Deslogado mostra "Entrar"; logado mostra o email (link pra <code class="mono">/conta</code>) e um botão "Sair" (CA07, RF06).</p>
+          <div class="files">
+            <span class="file-chip">src/components/Nav.tsx</span>
+            <span class="file-chip new">src/components/Nav.test.tsx</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">09</span>
+        <div>
+          <h3>Integração no App.tsx</h3>
+          <p>Monta o <code class="mono">AuthProvider</code> no topo da árvore e registra as três rotas novas; build de produção sem erros (CA08).</p>
+          <div class="files">
+            <span class="file-chip">src/App.tsx</span>
+            <span class="file-chip">src/App.test.tsx</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">10</span>
+        <div>
+          <h3>Evidências e DOD</h3>
+          <p>Passo a passo de validação humana (cadastro → login → gerar token → revogar → sair) e checklist de Definition of Done marcada.</p>
+          <div class="files">
+            <span class="file-chip new">docs/evidence/contas.md</span>
+            <span class="file-chip">spec-contas.md</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <ul class="decisions">
+      <li><strong>Sessão detectada via <code class="mono">GET /contas/me</code> ao montar, não lendo o cookie.</strong>
+        O cookie de sessão é <code class="mono">httpOnly</code> por design — perguntar ao backend
+        uma vez é a única forma correta de saber se há sessão válida.</li>
+      <li><strong><code class="mono">RotaProtegida</code> só protege <code class="mono">/conta</code>.</strong>
+        Tabela, Jogadores e Detalhe continuam sem gate — decisão de produto já fechada no backend.</li>
+      <li><strong>Achado na revisão final: <code class="mono">AuthProvider</code> duplicado em <code class="mono">main.tsx</code>.</strong>
+        Um task anterior tinha adicionado o provider ali sem coordenação, causando double-wrapping
+        com o de <code class="mono">App.tsx</code> — identificado e revertido antes do merge.</li>
+    </ul>
+  </section>
+
+  <!-- ================= FASE 4B ================= -->
+
+  <section>
+    <div class="section-head">
+      <h2>Fase 4b — API Pública</h2>
+      <span class="section-status next">planejado · aguardando execução</span>
+    </div>
+    <p class="lede">
+      CORS por variável de ambiente (aceita a origem de produção sem tocar código) e
+      rate limiting — geral em toda a API e mais restrito em
+      <code class="mono">/contas/login</code>/<code class="mono">/contas/registro</code> contra
+      força bruta e spam de conta. Os endpoints de leitura continuam sem exigir
+      credencial — decisão de produto já fechada na Fase 4a. Publicar a porta da API na
+      internet fica fora desta fase (decisão de infraestrutura separada).
+    </p>
+
+    <figure>
+      <div class="diagram-wrap">
+        <svg viewBox="0 0 760 300" role="img" aria-label="Toda requisicao passa pelo limite geral por IP; login e registro somam um segundo limite mais restrito antes de chegar no endpoint; qualquer requisicao que estoura um dos dois limites recebe 429 preservando os headers de CORS.">
+          <defs>
+            <marker id="arrow4b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="var(--text-faint)"></path>
+            </marker>
+          </defs>
+
+          <rect class="node-box" x="20" y="20" width="220" height="52" rx="6"></rect>
+          <text class="node-label" x="130" y="51" text-anchor="middle">Requisição (qualquer rota)</text>
+
+          <rect class="node-box" x="270" y="20" width="230" height="52" rx="6"></rect>
+          <text class="node-label mono" x="385" y="51" text-anchor="middle">limite geral · 60/min por IP</text>
+
+          <rect class="node-box" x="270" y="110" width="230" height="52" rx="6"></rect>
+          <text class="node-label mono" x="385" y="141" text-anchor="middle">login/registro · 5/min por IP</text>
+
+          <rect class="node-box muted" x="560" y="60" width="180" height="50" rx="6"></rect>
+          <text class="node-label" x="650" y="90" text-anchor="middle">429 + Retry-After</text>
+
+          <rect class="node-box done" x="560" y="150" width="180" height="50" rx="6"></rect>
+          <text class="node-label" x="650" y="180" text-anchor="middle">Endpoint processa</text>
+
+          <rect class="node-box next" x="20" y="230" width="700" height="42" rx="6"></rect>
+          <text class="node-label mono" x="370" y="256" text-anchor="middle">CORSMiddleware por fora — 429 também sai com o header de origem correto</text>
+
+          <line class="edge" x1="240" y1="46" x2="270" y2="46" marker-end="url(#arrow4b)"></line>
+          <line class="edge" x1="240" y1="46" x2="270" y2="136" marker-end="url(#arrow4b)"></line>
+          <line class="edge" x1="500" y1="46" x2="560" y2="85" marker-end="url(#arrow4b)"></line>
+          <line class="edge" x1="500" y1="136" x2="560" y2="90" marker-end="url(#arrow4b)"></line>
+          <line class="edge" x1="500" y1="46" x2="560" y2="165" marker-end="url(#arrow4b)"></line>
+          <line class="edge" x1="500" y1="136" x2="560" y2="175" marker-end="url(#arrow4b)"></line>
+        </svg>
+      </div>
+      <figcaption>
+        Todo endpoint passa pelo limite geral (60/min por IP, via
+        <code class="mono">SlowAPIMiddleware</code>, sem precisar decorar rota por rota).
+        <code class="mono">/contas/login</code> e <code class="mono">/contas/registro</code> somam
+        um limite específico mais restrito (5/min), que substitui o geral só pra elas. O
+        <code class="mono">CORSMiddleware</code> fica "por fora" dos dois — até uma resposta
+        <code class="mono">429</code> sai com o header de origem certo.
+      </figcaption>
+    </figure>
+
+    <h3 style="margin-top:2.5rem;">As 7 tasks</h3>
+    <div class="tasks">
+
+      <div class="task">
+        <span class="num">01</span>
+        <div>
+          <h3>Configuração — CORS e limites por env var</h3>
+          <p>Origens de CORS e os três limites (geral, login, registro) viram configuráveis; wildcard <code class="mono">*</code> é rejeitado explicitamente na leitura da config.</p>
+          <div class="files">
+            <span class="file-chip">app/shared/config.py</span>
+            <span class="file-chip">.env.example</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">02</span>
+        <div>
+          <h3>Limiter e handler de 429</h3>
+          <p>Módulo novo com o <code class="mono">Limiter</code> do slowapi e um handler de 429 no formato <code class="mono">{"detail": ...}</code> — o handler default da lib usa <code class="mono">{"error": ...}</code>, que o cliente web não lê.</p>
+          <div class="files">
+            <span class="file-chip new">app/shared/rate_limit.py</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">03</span>
+        <div>
+          <h3>Integração no app — CORS configurável + middleware do limiter</h3>
+          <p>Liga o limiter e o CORS a partir da configuração; ordem dos middlewares garante que 429 preserva os headers de CORS.</p>
+          <div class="files">
+            <span class="file-chip">app/main.py</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">04</span>
+        <div>
+          <h3>Reset do limiter entre testes</h3>
+          <p>Fixture global que zera o contador do limiter antes de cada teste — sem isso, os testes existentes de login/registro compartilhariam contador (mesmo IP fake do TestClient) e ficariam frágeis à ordem de execução.</p>
+          <div class="files">
+            <span class="file-chip new">tests/conftest.py</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">05</span>
+        <div>
+          <h3>Rate limit em login e registro</h3>
+          <p>5 tentativas/min por IP em cada rota — a 6ª retorna 429. <code class="mono">registro</code> ganha um parâmetro <code class="mono">response: Response</code> que não existia (o slowapi precisa dele pra anexar os headers de rate limit).</p>
+          <div class="files">
+            <span class="file-chip">app/contexts/contas/api/contas.py</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">06</span>
+        <div>
+          <h3>CORS sob 429, kill switch, contadores independentes</h3>
+          <p>Fecha os critérios que faltam: 429 preserva CORS, <code class="mono">RATE_LIMIT_ENABLED=false</code> desliga tudo, e estourar um limite não consome o outro.</p>
+          <div class="files">
+            <span class="file-chip new">tests/integration/shared/test_rate_limiting.py</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">07</span>
+        <div>
+          <h3>Evidências, DOD e roadmap</h3>
+          <p>Passo a passo de validação humana (curl estourando o limite de login), checklist de DOD marcada, e este roadmap promovido pra concluído.</p>
+          <div class="files">
+            <span class="file-chip new">docs/evidence/fase4b-api-publica.md</span>
+            <span class="file-chip">spec-fase4b-api-publica.md</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= VISUALIZAÇÃO AVANÇADA (FASE 3) ================= -->
+
+  <section>
+    <div class="section-head">
+      <h2>Visualização Avançada — o caminho até o visual da POC</h2>
+      <span class="section-status done">Fase 3 · 3 de 5 sub-fases na main</span>
+    </div>
+    <p class="lede">
+      A POC original (dados fictícios, validada antes do schema real) provou três telas que
+      o MVP web de hoje ainda não tinha: <strong>radar de atributos</strong> por jogador (4
+      indicadores reais — pontuação média, disciplina e dois específicos do grupo de posição,
+      <strong>raio-X de confronto</strong> (jogador × mando × o que o adversário costuma
+      ceder) e <strong>perfil de risco</strong> (o quanto a pontuação do jogador depende de
+      scouts de retorno direto — gol/assistência — versus scouts de participação). Essa
+      trilha não depende da Fase 4a nem da 4b/5 — só da fundação de dados já pronta desde a
+      Fase 2.
+    </p>
+
+    <figure>
+      <div class="diagram-wrap">
+        <svg viewBox="0 0 820 260" role="img" aria-label="Duas sub-fases preparam dado (percentis por posicao e proximo confronto agendado), cada uma habilitando sua tela (radar e raio-X); perfil de risco e independente; as tres convergem no detalhe do jogador com paridade visual com a POC.">
+          <defs>
+            <marker id="arrow5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="var(--text-faint)"></path>
+            </marker>
+          </defs>
+
+          <!-- branch radar -->
+          <rect class="node-box done" x="20" y="20" width="190" height="52" rx="6"></rect>
+          <text class="node-label" x="115" y="42" text-anchor="middle">3a · Percentis por posição</text>
+          <text class="node-sub" x="115" y="58" text-anchor="middle">backend</text>
+
+          <rect class="node-box done" x="20" y="110" width="190" height="52" rx="6"></rect>
+          <text class="node-label" x="115" y="132" text-anchor="middle">3b · Radar de atributos</text>
+          <text class="node-sub" x="115" y="148" text-anchor="middle">backend + web</text>
+
+          <!-- branch raio-x -->
+          <rect class="node-box done" x="315" y="20" width="190" height="52" rx="6"></rect>
+          <text class="node-label" x="410" y="42" text-anchor="middle">3c · Próximo confronto</text>
+          <text class="node-sub" x="410" y="58" text-anchor="middle">backend</text>
+
+          <rect class="node-box next" x="315" y="110" width="190" height="52" rx="6"></rect>
+          <text class="node-label" x="410" y="132" text-anchor="middle">3d · Raio-X de confronto</text>
+          <text class="node-sub" x="410" y="148" text-anchor="middle">backend + web</text>
+
+          <!-- perfil de risco standalone -->
+          <rect class="node-box next" x="610" y="65" width="190" height="52" rx="6"></rect>
+          <text class="node-label" x="705" y="87" text-anchor="middle">3e · Perfil de risco</text>
+          <text class="node-sub" x="705" y="103" text-anchor="middle">backend + web</text>
+
+          <!-- converge -->
+          <rect class="node-box done" x="215" y="200" width="390" height="46" rx="6"></rect>
+          <text class="node-label" x="410" y="228" text-anchor="middle">Detalhe do jogador — paridade visual com a POC</text>
+
+          <line class="edge" x1="115" y1="72" x2="115" y2="110" marker-end="url(#arrow5)"></line>
+          <line class="edge" x1="410" y1="72" x2="410" y2="110" marker-end="url(#arrow5)"></line>
+
+          <line class="edge" x1="115" y1="162" x2="330" y2="200" marker-end="url(#arrow5)"></line>
+          <line class="edge" x1="410" y1="162" x2="410" y2="200" marker-end="url(#arrow5)"></line>
+          <line class="edge" x1="705" y1="117" x2="490" y2="200" marker-end="url(#arrow5)"></line>
+        </svg>
+      </div>
+      <figcaption>
+        Duas sub-fases preparam dado que ainda não existe (percentil por posição, calendário
+        de próximo confronto); cada uma libera a tela correspondente. Perfil de risco não
+        depende de dado novo — reusa os pesos de scout já ingeridos — e pode entrar em
+        qualquer ordem. As três convergem no mesmo lugar: o detalhe do jogador.
+      </figcaption>
+    </figure>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem; align-items:start;">
+      <figure style="margin:0;">
+        <div class="diagram-wrap">
+          <svg viewBox="0 0 300 300" role="img" aria-label="Radar de quatro eixos para um atacante: Pontuacao media 100, Participacao em gol 100, Desarme 60, Disciplina 63 — exemplo com dado real da temporada.">
+            <polygon class="radar-ring" points="150,50 250,150 150,250 50,150"></polygon>
+
+            <line class="radar-axis" x1="150" y1="150" x2="150" y2="50"></line>
+            <line class="radar-axis" x1="150" y1="150" x2="250" y2="150"></line>
+            <line class="radar-axis" x1="150" y1="150" x2="150" y2="250"></line>
+            <line class="radar-axis" x1="150" y1="150" x2="50" y2="150"></line>
+
+            <polygon class="radar-fill" points="150,50 250,150 150,210 87,150"></polygon>
+            <circle class="radar-vertex" cx="150" cy="50" r="2.5"></circle>
+            <circle class="radar-vertex" cx="250" cy="150" r="2.5"></circle>
+            <circle class="radar-vertex" cx="150" cy="210" r="2.5"></circle>
+            <circle class="radar-vertex" cx="87" cy="150" r="2.5"></circle>
+
+            <text class="radar-label hi" x="150" y="30" text-anchor="middle">Pontuação média 100</text>
+            <text class="radar-label" x="290" y="154" text-anchor="end">Participação em gol 100</text>
+            <text class="radar-label" x="150" y="272" text-anchor="middle">Desarme 60</text>
+            <text class="radar-label" x="10" y="154" text-anchor="start">Disciplina 63</text>
+          </svg>
+        </div>
+        <figcaption>
+          Radar de 4 eixos construído com dado real (exemplo: atacante "Pedro", topo da
+          participação em gol na temporada). Os eixos são Pontuação média, Participação em
+          gol, Desarme e Disciplina; um goleiro troca os dois do meio por Defesas e
+          Solidez (SG) — a estrutura de 4 eixos é a mesma, só a fórmula dos indicadores 2
+          e 3 muda.
+        </figcaption>
+      </figure>
+
+      <figure style="margin:0;">
+        <div class="diagram-wrap">
+          <svg viewBox="0 0 320 300" role="img" aria-label="Raio-X do confronto em tres blocos: media do jogador nesse mando, o que o adversario cede naquela posicao e mando, e participacao do jogador na pontuacao do time — convergindo num veredito de referencia, contribuicao dividida ou pontuacao diluida.">
+            <defs>
+              <marker id="arrow6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M0,0 L10,5 L0,10 z" fill="var(--text-faint)"></path>
+              </marker>
+            </defs>
+            <rect class="node-box" x="10" y="10" width="300" height="46" rx="6"></rect>
+            <text class="node-label" x="160" y="30" text-anchor="middle">Jogador nesse mando</text>
+            <text class="node-sub" x="160" y="45" text-anchor="middle">média casa/fora vs. média geral</text>
+
+            <rect class="node-box" x="10" y="86" width="300" height="46" rx="6"></rect>
+            <text class="node-label" x="160" y="106" text-anchor="middle">O que o adversário cede</text>
+            <text class="node-sub" x="160" y="121" text-anchor="middle">posição × mando do rival</text>
+
+            <rect class="node-box" x="10" y="162" width="300" height="46" rx="6"></rect>
+            <text class="node-label" x="160" y="182" text-anchor="middle">Participação no time</text>
+            <text class="node-sub" x="160" y="197" text-anchor="middle">% da pontuação que vem dele</text>
+
+            <rect class="node-box next" x="10" y="248" width="300" height="42" rx="6"></rect>
+            <text class="node-label" x="160" y="274" text-anchor="middle">Veredito: referência · dividida · diluída</text>
+
+            <line class="edge" x1="160" y1="56" x2="160" y2="86" marker-end="url(#arrow6)"></line>
+            <line class="edge" x1="160" y1="132" x2="160" y2="162" marker-end="url(#arrow6)"></line>
+            <line class="edge" x1="160" y1="208" x2="160" y2="248" marker-end="url(#arrow6)"></line>
+          </svg>
+        </div>
+        <figcaption>
+          Os três blocos do raio-X, na ordem em que aparecem no detalhe do jogador — cada
+          bloco cruza uma dimensão diferente do dado antes do selo final (Fase 3d).
+        </figcaption>
+      </figure>
+    </div>
+
+    <h3 style="margin-top:2.5rem;">As 5 sub-fases</h3>
+    <div class="tasks">
+
+      <div class="task">
+        <span class="num">3a</span>
+        <div>
+          <div class="scope-row"><span class="scope-chip backend">backend</span></div>
+          <h3>Percentis por posição</h3>
+          <p>Cada atleta ganha o percentil dos scouts relevantes à própria posição, comparado
+          só com os demais da mesma posição — a base numérica que o radar (3b) consome.
+          Entregue com corte mínimo de 5 jogos, empates preservados e cálculo idempotente para
+          GOL, ZAG, LAT, MEI e ATA. A validação real materializou 477 atletas.</p>
+          <span class="delivery-badge main">ENTREGUE NA MAIN</span>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">3b</span>
+        <div>
+          <div class="scope-row"><span class="scope-chip backend">backend</span><span class="scope-chip web">web</span></div>
+          <h3>Radar de atributos</h3>
+          <p>Endpoint com os 4 indicadores reais por posição: Pontuação média e Disciplina;
+          GOL usa Defesas/Solidez, enquanto jogadores de linha usam Participação em gol/Desarme.
+          O web renderiza o radar SVG no detalhe do jogador, no estilo visual validado na POC.</p>
+          <span class="delivery-badge main">ENTREGUE NA MAIN</span>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">3c</span>
+        <div>
+          <div class="scope-row"><span class="scope-chip backend">backend</span></div>
+          <h3>Próximo confronto agendado</h3>
+          <p>Função <code class="mono">buscar_proximo_confronto</code> devolve o próximo jogo
+          de um clube (rodada, mando e adversário) a partir do que já está persistido em
+          <code class="mono">partida</code> — sem mudança de ingestão nem migração.
+          Pré-requisito do raio-X (3d).</p>
+          <span class="delivery-badge main">ENTREGUE NA MAIN</span>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">3d</span>
+        <div>
+          <div class="scope-row"><span class="scope-chip backend">backend</span><span class="scope-chip web">web</span></div>
+          <h3>Raio-X de confronto</h3>
+          <p>Cruza mando do jogador × o que o adversário cede pra aquela posição naquele
+          mando × participação do jogador na pontuação do time — com o selo de veredito
+          (referência do time, contribuição dividida, pontuação diluída).</p>
+          <span class="delivery-badge pending">FALTA PARA CONCLUIR</span>
+        </div>
+      </div>
+
+      <div class="task">
+        <span class="num">3e</span>
+        <div>
+          <div class="scope-row"><span class="scope-chip backend">backend</span><span class="scope-chip web">web</span></div>
+          <h3>Perfil de risco</h3>
+          <p>Selo de volatilidade: quanto da pontuação do jogador vem de scouts de retorno
+          direto (gol, assistência) versus scouts de participação/defensivos — sinaliza
+          dependência do resultado do time em vez de produção própria.</p>
+          <span class="delivery-badge pending">FALTA PARA CONCLUIR</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PRÓXIMAS FASES ================= -->
+
+  <section>
+    <div class="section-head">
+      <h2>Depois disso — o resto da trilha</h2>
+      <span class="section-status future">futuro</span>
+    </div>
+    <p class="lede">
+      Segue a fundação de contas, não a visualização — pode acontecer antes, depois ou em
+      paralelo à Fase 3. Só falta a Fase 5 — a Fase 4b já tem plano próprio (seção acima).
+    </p>
+    <div class="future-grid">
+      <div class="future-card">
+        <p class="tag">Fase 5</p>
+        <h3>MCP autenticado</h3>
+        <p>Servidor MCP novo (repo <code class="mono">mcp/</code>, hoje vazio) valida o API token pessoal via <code class="mono">GET /contas/me</code> e expõe as consultas do backend como tools pra agentes.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Cartola Insights — roadmap combinando <span class="mono">spec-fase4a-auth-contas.md</span>, <span class="mono">spec-contas.md</span> e a POC visual original (dados fictícios)</span>
+    <span class="mono">23 ago 2026</span>
+  </footer>
+
+</div>
+
+</body></html>
