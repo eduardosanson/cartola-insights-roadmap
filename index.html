@@ -1014,20 +1014,22 @@
     </div>
     <p class="lede">
       A trilha transforma histórico de preços e pontuações em decisões de mercado e
-      escalações completas. A Fase 3 calcula faixas de preço, regressão e MPV; a Fase 4
-      usa esses dados e as estatísticas dos atletas em um modelo ILP com PuLP/CBC; a
-      Fase 5 completa a decisão pré-rodada com matriz de capitão, substitutos elegíveis
-      e radar de mudanças de status.
+      escalações completas. Backend e web estão integrados: a Fase 3 calcula faixas de
+      preço, regressão e MPV e os transforma em simulador e curva de patrimônio; a Fase 4
+      usa esses dados em um modelo ILP com PuLP/CBC e exibe a escalação num campo tático;
+      a Fase 5 completa a decisão pré-rodada com matriz de capitão, substitutos elegíveis
+      e alertas de mudanças de status.
     </p>
 
     <div class="tasks">
       <div class="task">
         <span class="num">R2·3</span>
         <div>
-          <div class="scope-row"><span class="scope-chip backend">backend</span></div>
+          <div class="scope-row"><span class="scope-chip backend">backend</span><span class="scope-chip web">web</span></div>
           <h3>Gestão de patrimônio e MPV</h3>
           <p>Faixas de preço, regressão linear e margem para valorizar integradas ao
-          recálculo estatístico, com endpoints de MPV por atleta e curva de valorização.</p>
+          recálculo estatístico, com MPV no detalhe, simulador client-side e curva de
+          transição estratégica em <code>/patrimonio</code>.</p>
           <span class="delivery-badge main">ENTREGUE NA MAIN</span>
         </div>
       </div>
@@ -1035,11 +1037,11 @@
       <div class="task">
         <span class="num">R2·4</span>
         <div>
-          <div class="scope-row"><span class="scope-chip backend">backend</span></div>
+          <div class="scope-row"><span class="scope-chip backend">backend</span><span class="scope-chip web">web</span></div>
           <h3>Lineup Optimizer</h3>
           <p>Escalação ótima em seis esquemas oficiais, respeitando orçamento, posições e
-          limite por clube. Oferece os modos Clássica, Tiro Curto e Patrimônio, com timeout
-          seguro e validação real sobre 774 preços da rodada 24.</p>
+          limite por clube. A tela <code>/escalador</code> oferece os modos Clássica, Tiro
+          Curto e Patrimônio, com campo tático responsivo e tratamento de inviabilidade.</p>
           <span class="delivery-badge main">ENTREGUE NA MAIN</span>
         </div>
       </div>
@@ -1047,11 +1049,11 @@
       <div class="task">
         <span class="num">R2·5</span>
         <div>
-          <div class="scope-row"><span class="scope-chip backend">backend</span></div>
+          <div class="scope-row"><span class="scope-chip backend">backend</span><span class="scope-chip web">web</span></div>
           <h3>Matriz de Capitão &amp; Live Radar</h3>
           <p>Ranking de capitães por média, consistência e confronto; substitutos na mesma
-          posição e faixa de preço; sincronização incremental dos 774 status do mercado e
-          consulta das alterações desde um instante informado.</p>
+          posição e faixa de preço; <code>/capitaes</code> preserva o Top 5 e
+          <code>/alertas</code> consulta mudanças ao focar a aba, sem polling contínuo.</p>
           <span class="delivery-badge main">ENTREGUE NA MAIN</span>
         </div>
       </div>
@@ -1060,6 +1062,8 @@
     <div class="stats">
       <div class="stat"><span class="n">419</span><span class="l">testes passando</span></div>
       <div class="stat"><span class="n">98,55%</span><span class="l">cobertura backend</span></div>
+      <div class="stat"><span class="n">192</span><span class="l">testes web passando</span></div>
+      <div class="stat"><span class="n">97,94%</span><span class="l">cobertura web (statements)</span></div>
       <div class="stat"><span class="n">&lt; 0,13s</span><span class="l">três modos com dados reais</span></div>
       <div class="stat"><span class="n">6</span><span class="l">esquemas táticos</span></div>
       <div class="stat"><span class="n">1,062s</span><span class="l">sync de 774 status</span></div>
