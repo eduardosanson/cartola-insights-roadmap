@@ -163,7 +163,7 @@
     border: 1px solid var(--border);
   }
   .progress-fill {
-    width: 53.85%;
+    width: 57.14%;
     height: 100%;
     background: linear-gradient(90deg, var(--accent-home), color-mix(in srgb, var(--accent-home) 72%, var(--accent-away)));
   }
@@ -418,7 +418,8 @@
       Duas frentes independentes a partir da fundação já construída (Fases 1–2):
       contas e autenticação (backend e telas web prontos, API pública e MCP
       pela frente), visualização avançada e inteligência de escalação. A nova trilha
-      já entrega gestão de patrimônio/MPV e otimização de escalação por objetivo.
+      já entrega gestão de patrimônio/MPV, otimização de escalação por objetivo,
+      matriz de capitão e monitoramento de status em tempo real.
     </p>
     <div class="status-rail">
       <span class="pill done"><span class="dot"></span>Fases 1–2 — Fundação + MVP</span>
@@ -427,17 +428,18 @@
       <span class="pill done"><span class="dot"></span>Fase 3a — Percentis</span>
       <span class="pill done"><span class="dot"></span>Roadmap 2 · Fase 3 — Patrimônio e MPV</span>
       <span class="pill done"><span class="dot"></span>Roadmap 2 · Fase 4 — Lineup Optimizer</span>
+      <span class="pill done"><span class="dot"></span>Roadmap 2 · Fase 5 — Matriz de Capitão + Live</span>
       <span class="pill next"><span class="dot"></span>Fase 4b — API pública</span>
       <span class="pill">Fase 5 — MCP autenticado</span>
       <span class="pill">Fase 3b–3e — Visualização avançada</span>
     </div>
-    <div class="progress-panel" aria-label="Progresso global do roadmap: 7 de 13 marcos entregues na main">
-      <div class="progress-copy"><strong>Progresso global</strong><span>7 / 13 marcos · 54%</span></div>
-      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="13" aria-valuenow="7" aria-label="7 de 13 marcos concluídos">
+    <div class="progress-panel" aria-label="Progresso global do roadmap: 8 de 14 marcos entregues na main">
+      <div class="progress-copy"><strong>Progresso global</strong><span>8 / 14 marcos · 57%</span></div>
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="14" aria-valuenow="8" aria-label="8 de 14 marcos concluídos">
         <div class="progress-fill"></div>
       </div>
       <div class="delivery-summary">
-        <div class="delivery-state main"><strong>7 entregues na main</strong>Fundação, MVP web, Auth, telas de conta, Fase 3a, Patrimônio/MPV e Lineup Optimizer.</div>
+        <div class="delivery-state main"><strong>8 entregues na main</strong>Fundação, MVP web, Auth, telas de conta, Fase 3a e Fases 3–5 da Inteligência de Escalação.</div>
         <div class="delivery-state merge"><strong>0 aguardando merge</strong>Nenhuma entrega pronta está fora da main.</div>
         <div class="delivery-state pending"><strong>6 ainda pendentes</strong>3b, 3c, 3d, 3e, 4b e 5.</div>
       </div>
@@ -1008,12 +1010,14 @@
   <section>
     <div class="section-head">
       <h2>Roadmap 2 — Inteligência de Escalação</h2>
-      <span class="section-status done">Fases 3–4 · concluídas na main</span>
+      <span class="section-status done">Fases 3–5 · concluídas na main</span>
     </div>
     <p class="lede">
       A trilha transforma histórico de preços e pontuações em decisões de mercado e
       escalações completas. A Fase 3 calcula faixas de preço, regressão e MPV; a Fase 4
-      usa esses dados e as estatísticas dos atletas em um modelo ILP com PuLP/CBC.
+      usa esses dados e as estatísticas dos atletas em um modelo ILP com PuLP/CBC; a
+      Fase 5 completa a decisão pré-rodada com matriz de capitão, substitutos elegíveis
+      e radar de mudanças de status.
     </p>
 
     <div class="tasks">
@@ -1039,13 +1043,27 @@
           <span class="delivery-badge main">ENTREGUE NA MAIN</span>
         </div>
       </div>
+
+      <div class="task">
+        <span class="num">R2·5</span>
+        <div>
+          <div class="scope-row"><span class="scope-chip backend">backend</span></div>
+          <h3>Matriz de Capitão &amp; Live Radar</h3>
+          <p>Ranking de capitães por média, consistência e confronto; substitutos na mesma
+          posição e faixa de preço; sincronização incremental dos 774 status do mercado e
+          consulta das alterações desde um instante informado.</p>
+          <span class="delivery-badge main">ENTREGUE NA MAIN</span>
+        </div>
+      </div>
     </div>
 
     <div class="stats">
-      <div class="stat"><span class="n">410</span><span class="l">testes passando</span></div>
-      <div class="stat"><span class="n">98,95%</span><span class="l">cobertura backend</span></div>
+      <div class="stat"><span class="n">419</span><span class="l">testes passando</span></div>
+      <div class="stat"><span class="n">98,55%</span><span class="l">cobertura backend</span></div>
       <div class="stat"><span class="n">&lt; 0,13s</span><span class="l">três modos com dados reais</span></div>
       <div class="stat"><span class="n">6</span><span class="l">esquemas táticos</span></div>
+      <div class="stat"><span class="n">1,062s</span><span class="l">sync de 774 status</span></div>
+      <div class="stat"><span class="n">5</span><span class="l">capitães retornados</span></div>
     </div>
   </section>
 
